@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPEG XL SDR vs HDR 对比画廊</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+        }
+        h1 { text-align: center; margin-bottom: 30px; }
+
+        /* --- 对比容器样式 --- */
+        .compare-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* 允许在窄屏幕下换行 */
+        }
+
+        /* 单个对比卡片 */
+        .compare-card {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            flex: 1;
+            max-width: 45%; /* 限制最大宽度，确保左右并排 */
+            min-width: 300px; /* 保证在手机上不会太小 */
+        }
+
+        .compare-card img {
+            width: 100%;      /* 让图片撑满卡片宽度 */
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* 标签样式 */
+        .label {
+            margin-top: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .label-sdr { background-color: #e0e0e0; color: #333; }
+        .label-hdr { background-color: #d4edda; color: #155724; }
+    </style>
+</head>
+<body>
+    <h1>家庭局域网 JPEG XL 画廊 (SDR vs HDR)</h1>
+
+    <div class="compare-container">
+        <!-- 图片 1 对比组 -->
+        <div class="compare-card">
+            <img src="images/photo1.jpg" alt="Photo 1 SDR" loading="lazy">
+            <div class="label label-sdr">SDR (标准动态范围)</div>
+        </div>
+        <div class="compare-card">
+            <img src="images/photo1.jxl" alt="Photo 1 HDR" loading="lazy">
+            <div class="label label-hdr">HDR (高动态范围)</div>
+        </div>
+
+        <!-- 图片 2 对比组 -->
+        <div class="compare-card">
+            <img src="images/photo1s.jxl" alt="Photo 2 SDR" loading="lazy">
+            <div class="label label-sdr">SDR (标准动态范围)</div>
+        </div>
+        <div class="compare-card">
+            <img src="images/photo2.jxl" alt="Photo 2 HDR" loading="lazy">
+            <div class="label label-hdr">HDR (高动态范围)</div>
+        </div>
+    </div>
+
+</body>
+</html>
